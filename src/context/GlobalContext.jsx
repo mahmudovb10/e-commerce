@@ -9,6 +9,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   signInAnonymously,
+  deleteUser,
 } from "firebase/auth";
 
 import { auth } from "@/firebase/config";
@@ -35,6 +36,21 @@ export const GlobalContextProvider = ({ children }) => {
     return signOut(auth);
   };
 
+  const deleteAndLogoutUser = async () => {
+    if (auth.currentUser) {
+      try {
+        await deleteUser(auth.currentUser);
+        await signOut(auth);
+        console.log("User deleted and system logout");
+      } catch (err) {
+        console.log("User deleted error " + err.message);
+
+        await signOut(auth);
+        throw err;
+      }
+    }
+  };
+
   const loginWithGoogle = () => {
     const provider = new GoogleAuthProvider();
     return signInWithPopup(auth, provider);
@@ -45,13 +61,30 @@ export const GlobalContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      if (currentUser) {
+        try {
+          // 🔥 MUHIM: Tokenni majburiy yangilash orqali server bilan aloqani tekshirish
+          await currentUser.getIdToken(true);
+
+          setUser(currentUser);
+          console.log("Token tasdiqlandi. Kirgan: ", currentUser.uid);
+        } catch (error) {
+          // Agar server tokenni rad etsa (user o'chirilgan)
+          console.error(
+            "Token tasdiqlashda xato: Foydalanuvchi o'chirilgan.",
+            error.message
+          );
+
+          // Lokal seansni tozalash va onAuthStateChanged ni ishga tushirish
+          await signOut(auth);
+          setUser(null);
+        }
+      } else {
+        setUser(null);
+      }
+
       setLoading(false);
-      console.log(
-        "Firebase Auth Holati Yangilandi:",
-        currentUser ? currentUser.uid : "Chiqilgan"
-      );
     });
 
     return () => unsubscribe();
@@ -62,9 +95,10 @@ export const GlobalContextProvider = ({ children }) => {
     loading,
     registerUser,
     loginUser,
-    logoutUser,
     loginWithGoogle,
     loginAnonymously,
+    logoutUser,
+    deleteAndLogoutUser,
   };
 
   return (
