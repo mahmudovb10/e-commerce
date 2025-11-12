@@ -1,22 +1,27 @@
-// src/lib/ProtectedRoute.jsx
 "use client";
 
 import { useGlobalContext } from "@/context/GlobalContext";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
 
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useGlobalContext();
   const router = useRouter();
+  const pathname = usePathname();
+  const redirectedRef = useRef(false);
+
+  const publicRoutes = ["/login", "/register"];
 
   useEffect(() => {
-    if (!loading && user === null) {
-      console.log(
-        "ProtectedRoute: User topilmadi, /login ga yo'naltirilmoqda."
-      );
+    console.log("ProtectedRoute:", { loading, user, pathname });
+
+    if (publicRoutes.includes(pathname)) return;
+
+    if (!loading && !user && !redirectedRef.current) {
+      redirectedRef.current = true;
       router.replace("/login");
     }
-  }, [user, loading, router]);
+  }, [user, loading, router, pathname]);
 
   if (loading) {
     return (
@@ -24,6 +29,10 @@ const ProtectedRoute = ({ children }) => {
         Authentifikatsiya tekshirilmoqda...
       </div>
     );
+  }
+
+  if (publicRoutes.includes(pathname)) {
+    return children;
   }
 
   if (user) {

@@ -19,9 +19,6 @@ export default function dashboard() {
   return (
     <div>
       <h1>Dashboard</h1>
-      <button onClick={handleLogout} className="btn btn-primary">
-        Logout
-      </button>
     </div>
   );
 }

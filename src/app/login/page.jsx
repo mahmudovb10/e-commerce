@@ -1,9 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-// Next.js App Router navigatsiyasi
 import { useRouter } from "next/navigation";
-// Next.js sahifalar o'rtasida o'tish linki
 import Link from "next/link";
 import { useGlobalContext } from "@/context/GlobalContext";
 

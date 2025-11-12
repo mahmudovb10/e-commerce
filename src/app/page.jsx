@@ -9,10 +9,9 @@ export default function Home() {
   if (error) return <p>Xato: {error.message}</p>;
 
   return (
-    <div className="p-4">
+    <div>
       <h1 className="text-3xl font-bold mb-6">Commerce</h1>
 
-      {/* GRID: Responsiv bo'lishi uchun shu yerda grid ishlatiladi */}
       <div
         className="
         grid 
