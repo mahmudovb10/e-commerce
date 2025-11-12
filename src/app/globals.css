@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+.prodCard {
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr); */
+  margin-top: 3rem;
+}
+
 .prodImage {
   width: 25rem;
   height: 15rem !important;
