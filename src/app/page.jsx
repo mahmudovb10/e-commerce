@@ -29,6 +29,7 @@ export default function Home() {
                 className="prodImage w-full h-48 object-cover"
                 src={prod.thumbnail}
                 alt={prod.title}
+                loading="lazy"
               />
             </figure>
             <div className="card-body">
