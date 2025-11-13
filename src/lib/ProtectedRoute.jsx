@@ -26,7 +26,7 @@ const ProtectedRoute = ({ children }) => {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen text-xl text-gray-500">
-        Authentifikatsiya tekshirilmoqda...
+        <span className="loading loading-dots loading-xl"></span>
       </div>
     );
   }

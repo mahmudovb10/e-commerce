@@ -64,19 +64,16 @@ export const GlobalContextProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         try {
-          // 🔥 MUHIM: Tokenni majburiy yangilash orqali server bilan aloqani tekshirish
           await currentUser.getIdToken(true);
 
           setUser(currentUser);
           console.log("Token tasdiqlandi. Kirgan: ", currentUser.uid);
         } catch (error) {
-          // Agar server tokenni rad etsa (user o'chirilgan)
           console.error(
             "Token tasdiqlashda xato: Foydalanuvchi o'chirilgan.",
             error.message
           );
 
-          // Lokal seansni tozalash va onAuthStateChanged ni ishga tushirish
           await signOut(auth);
           setUser(null);
         }

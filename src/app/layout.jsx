@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
     if (pathname === "/") title = "Home - Commerce";
     else if (pathname === "/login") title = "Login - Commerce";
     else if (pathname === "/register") title = "Register - Commerce";
+    else if (pathname === "/singleproduct") title = "Singe prod";
     else if (pathname.startsWith("/dashboard")) title = "Dashboard - Commerce";
 
     document.title = title;
