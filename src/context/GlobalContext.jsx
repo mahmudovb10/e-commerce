@@ -23,19 +23,19 @@ export const useGlobalContext = () => {
 export const GlobalContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  // register user
   const registerUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
-
+  // login user
   const loginUser = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
-
+  // Logout user
   const logoutUser = () => {
     return signOut(auth);
   };
-
+  // Delete user
   const deleteAndLogoutUser = async () => {
     if (auth.currentUser) {
       try {

@@ -4,28 +4,29 @@ import React from "react";
 import { useFetch } from "@/lib/useFetch";
 
 function SingleProduct({ params }) {
+  // Get id
   let resolvedParams = params;
   if (typeof params?.then === "function") {
     resolvedParams = React.use(params);
   }
-
+  // Get id
   const { id } = resolvedParams;
-
+  // Get API
   const { data, isPending, error } = useFetch(`/api.json`);
-
+  // Waiting procces
   if (isPending) {
     return <span className="loading loading-dots loading-xl"></span>;
   }
-
+  // Error procces
   if (error) {
     return <p>Xatolik yuz berdi + {error.message}</p>;
   }
-
+  // Finding a printed product
   const prod = data?.products?.find((p) => String(p.id) === String(id));
-
+  // If the product is not available
   if (!prod) {
     console.log("Mahsulot topilmadi. Data:", data);
-
+    // If such a product is not available
     if (!data || !data.products) {
       return <p>API ma'lumotlari yuklanmadi yoki noto'g'ri tuzilgan.</p>;
     }

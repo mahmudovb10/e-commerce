@@ -4,8 +4,8 @@ import { useFetch } from "@/lib/useFetch";
 import Link from "next/link";
 
 export default function Home() {
-  const { data, isPending, error } = useFetch("/api.json");
-
+  const { data, isPending, error } = useFetch("/api.json"); // Get API
+  // Just so it doesn't get updated for now
   const handleSubmit = (e) => {
     e.preventDefault();
   };

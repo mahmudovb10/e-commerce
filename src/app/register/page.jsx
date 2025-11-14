@@ -11,12 +11,11 @@ const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-  const router = useRouter(); // useNavigate o'rniga useRouter
+  const router = useRouter();
 
   const { registerUser, loginWithGoogle, loginAnonymously, user, loading } =
     useGlobalContext();
 
-  // ✨ MUHIM: Foydalanuvchi kirgan bo'lsa, asosiy sahifaga yo'naltirish
   useEffect(() => {
     if (!loading && user) {
       router.replace("/");
@@ -33,7 +32,6 @@ const RegisterPage = () => {
 
     try {
       await registerUser(email, password);
-      // router.push("/");
     } catch (err) {
       setError("Ro'yxatdan o'tishda xato: " + err.message);
     }
@@ -43,7 +41,6 @@ const RegisterPage = () => {
     setError(null);
     try {
       await loginWithGoogle();
-      // router.push("/");
     } catch (err) {
       setError(
         "Google orqali ro'yxatdan o'tishda xato: " +
@@ -56,13 +53,11 @@ const RegisterPage = () => {
     setError(null);
     try {
       await loginAnonymously();
-      // router.push("/");
     } catch (err) {
       setError("Anonim kirishda xato: " + err.message);
     }
   };
 
-  // Yuklanish yoki kirganlik holatida kontentni yashirish
   if (loading || user) {
     return (
       <div className="min-h-screen flex items-center justify-center text-xl text-gray-600">
@@ -78,7 +73,7 @@ const RegisterPage = () => {
 
         {error && (
           <div role="alert" className="alert alert-error mb-4">
-            <svg /*... SVG kodi ...*/ viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
