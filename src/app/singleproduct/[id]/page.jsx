@@ -37,6 +37,13 @@ function SingleProduct({ params }) {
     <div>
       <img className="singleProdImg" src={prod.thumbnail} alt={prod.title} />
       <h1 className="singleProdTitle">{prod.title}</h1>
+      <p className="singleProdDesc">{prod.description}</p>
+      <hr className="singleProdHr" />
+      <br />
+      <br />
+      <h2 className="singleProdRate">Baho: {prod.rating}⭐</h2>
+      <h2 className="singleProdStock">Qolgan: {prod.stock} dona</h2>
+      <h2 className="singleProdCategory">Kategoriya: {prod.categorySlug}</h2>
     </div>
   );
 }

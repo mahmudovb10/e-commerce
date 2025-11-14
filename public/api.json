@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Qora Non (Premium Bug'doy)",
-      "description": "Eng yaxshi sifatli un va yuqori protein bilan tayyorlangan non. SEO: qora non, bug'doy.",
+      "description": "Qora non - bu asosan javdar unidan tayyorlanadigan qadimiy, to'yimli va foydali non mahsulotidir. Premium bug'doy unining qo'shilishi tufayli ta'mi yumshoqroq va tuzilishi zichroq. U B guruh vitaminlari, temir va ayniqsa, yuqori miqdordagi seratlamalarga (kletchatkaga) ega bo'lib, ovqat hazm qilishni yaxshilaydi. Xarakterli nordon ta'm va boy lazzat uni kundalik ovqatlarga mukammal qo'shimcha qiladi.",
       "price": 4000,
       "discountPercentage": 0,
       "rating": 4.9,
@@ -17,7 +17,7 @@
     {
       "id": 2,
       "title": "Oq Non (Baton) - Yumshoq",
-      "description": "Eng yuqori navli undan yumshoq usulda pishirilgan oq baton. LCP optimallashtirilgan.",
+      "description": "Oq non (Baton) - bu kundalik dasturxonning klassik va ajralmas qismi. U eng yuqori navli bug'doy unidan tayyorlanadi, bu esa unga ajoyib yumshoqlik, yengil tuzilish va beqiyos nafis ta'm beradi. Batonning ichi yumshoq va g'ovak, tashqi qobig'i esa ozgina oltin rangda. Nonushta, sendvichlar tayyorlash yoki oddiygina ovqat bilan birga iste'mol qilish uchun juda mos keladi. Har bir oilaning sevimli tanlovi.",
       "price": 3500,
       "discountPercentage": 5.0,
       "rating": 4.5,
@@ -32,7 +32,7 @@
     {
       "id": 3,
       "title": "Chiroyli Non (Uzun Katta)",
-      "description": "Yirik oilalar uchun mo'ljallangan katta hajm. UX va Virtualizatsiya sinovi.",
+      "description": "Chiroyli Non - bu kattaligi va shakli bilan ajralib turadigan, yirik oilalar uchun mo'ljallangan maxsus non turi. Uning yumshoq ichki qismi va yorqin, oltin qobig'i har qanday dasturxonni bezaydi. Bu non mahsuloti to'yimliligi va estetik ko'rinishi bilan bayramona yoki do'stona yig'ilishlar uchun ideal tanlovdir.",
       "price": 5000,
       "discountPercentage": 0,
       "rating": 4.7,
@@ -47,7 +47,7 @@
     {
       "id": 4,
       "title": "Lavash ",
-      "description": "Tez ovqatlanish uchun qulay. Katta ro'yxatlarni filtratsiya qilishda qulay.",
+      "description": "Lavash - bu Kavkaz va Yaqin Sharq oshxonalarining ajralmas qismi bo'lgan yupqa, to'rtburchak shakldagi non. Uning asosiy xususiyati - pishiriqdan keyin tez yumshashi. Lavash tez ovqatlanish (rol va tyortillar) tayyorlash, shuningdek, kabob va boshqa taomlarni o'rash uchun qulay. Uzoq muddat yumshoqligini saqlaydi va turli xil taomlar bilan mos keladi.",
       "price": 8000,
       "discountPercentage": 10.0,
       "rating": 4.6,
@@ -62,7 +62,7 @@
     {
       "id": 5,
       "title": "Xamir Turush (Tez Eriyuvchi)",
-      "description": "Non va pishiriqlar uchun yuqori sifatli xamirturush.",
+      "description": "Tez Eriyuvchi Xamir Turush - bu uyda non va har qanday pishiriqlar tayyorlashni osonlashtiradigan yuqori sifatli ingredient. U xamirni tez ko'taradi va uzoq vaqt kutishni talab qilmaydi. Bu xamirturush tufayli tayyorlangan pishiriqlar yumshoq, havodor va mazali chiqadi, hatto yangi boshlovchilar uchun ham ishlatish qulay.",
       "price": 1500,
       "discountPercentage": 0,
       "rating": 4.3,
@@ -77,7 +77,7 @@
     {
       "id": 6,
       "title": "Xo'rozqand ",
-      "description": "Bolalar uchun shirinlik. Turli ranglarda.",
+      "description": "Xo'rozqand - bu bolalikdan tanish bo'lgan, turli xil shakl va rangdagi shirin karamel konfetlari. Ular asosan shakar va suv asosida tayyorlanadi, yorqin rang beruvchilar bilan bo'yaladi. Xo'rozqandlar bayram dasturxonlari va shunchaki kichik shirinliklar uchun sevimli tanlov hisoblanadi.",
       "price": 2000,
       "discountPercentage": 0,
       "rating": 3.9,
@@ -92,7 +92,7 @@
     {
       "id": 7,
       "title": "Shokolad (Sutli) 100g",
-      "description": "Klassik sutli shokolad. Qo'lda yozilgan JSON namuna.",
+      "description": "Klassik Sutli Shokolad - bu 100 grammlik plitkada qadoqlangan, silliq va krem-yumshoq ta'mga ega shirinlik. Yuqori sifatli kakao massasi va sutning mukammal aralashmasi uni butun oila uchun sevimli desertga aylantiradi. Uni choy yoki qahva bilan birga iste'mol qilish yoki turli xil pishiriqlar uchun ishlatish mumkin.",
       "price": 15000,
       "discountPercentage": 15.0,
       "rating": 4.8,
@@ -107,7 +107,7 @@
     {
       "id": 8,
       "title": "Shokolad (Achchiq) 75%",
-      "description": "75% kakao miqdori bilan achchiq shokolad. Katta yoshdagilar uchun.",
+      "description": "Achchiq Shokolad (75% Kakao) - bu kuchli, boy va shokoladning haqiqiy achchiq lazzatini qidiruvchilar uchun tanlov. 75% kakao miqdori antioksidantlarga boy bo'lishini ta'minlaydi. U shirinlikni kamroq iste'mol qiladigan yoki sog'lom turmush tarziga rioya qiladigan katta yoshdagilar uchun ideal tanlov.",
       "price": 18000,
       "discountPercentage": 0,
       "rating": 4.6,
@@ -122,7 +122,7 @@
     {
       "id": 9,
       "title": "Konfet (Karamel) 200g",
-      "description": "Yumshoq karamel konfetlari. Oddiy mahsulot kategoriyasi.",
+      "description": "Yumshoq Karamel Konfetlar - bu 200 grammlik paketdagi, og'izda erib ketadigan yumshoq, shirin va o'ziga xos karamel ta'miga ega konfetlar. Bu konfetlar kichik tanaffuslar va mehmonlarni choy bilan mehmon qilish uchun juda mos keladi.",
       "price": 12000,
       "discountPercentage": 10.0,
       "rating": 4.2,
@@ -137,7 +137,7 @@
     {
       "id": 10,
       "title": "Chipslar (Piyozli) Katta Paketi",
-      "description": "Katta hajmli piyoz va qaymoq ta'mli chips. Laziness sinovi.",
+      "description": "Piyozli va Qaymoqli Chipslar - bu xushbo'y, xushk bo'lgan va yorqin piyoz va qaymoq ta'mi bilan boyitilgan kartoshka chiplarining katta paketi. Do'stlar bilan uchrashuvlar, kinolar tomosha qilish yoki sport o'yinlari uchun a'lo darajadagi snack. Har bir chip yengil va mazali, cheksiz lazzatlanishni ta'minlaydi.",
       "price": 11000,
       "discountPercentage": 0,
       "rating": 3.8,
@@ -152,7 +152,7 @@
     {
       "id": 11,
       "title": "Popkorn (Tuzli) 100g",
-      "description": "Kinoga mos tuzli popkorn. Ma'lumotlarni tez filtratsiya qilish.",
+      "description": "Popkorn (Tuzli) 100g - Kinoteatr atmosferasini uyga olib keluvchi eng yaxshi tanlov! Yangi pishirilgan, mayin tuzlangan va xushbo'y popkorn. Uning yengil va xushk tuzilishi filmlar tomosha qilish, do'stlar bilan suhbatlashish yoki shunchaki tez snack sifatida iste'mol qilish uchun ideal. Har bir donasi ajoyib lazzat va quvnoq damlarni ta'minlaydi.",
       "price": 5000,
       "discountPercentage": 0,
       "rating": 4.1,
@@ -167,7 +167,7 @@
     {
       "id": 12,
       "title": "Pizza (Kichik) Margherita",
-      "description": "Bir kishilik kichik Margherita pizza. Tez ovqatlanish.",
+      "description": "Kichik Margherita Pizza - Klassik italyan ta'mining sodda va nafis namunasi. Yumshoq xamir, eng yangi pomidor sousi, erigan Mozzarella pishlog'i va xushbo'y rayhon (bazilik) barglari bilan bezatilgan. Bir kishilik tushlik yoki kechki ovqat uchun mukammal o'lchamda. Tez tayyor bo'lishi va nafis ta'mi uni eng sevimli taomlardan biriga aylantiradi.",
       "price": 45000,
       "discountPercentage": 10.0,
       "rating": 4.6,
@@ -182,7 +182,7 @@
     {
       "id": 13,
       "title": "Xot-Dog (Klassik) - Yashil",
-      "description": "Klassik xot-dog, standart komponent hisoblanadi.",
+      "description": "Klassik Xot-Dog - Yumshoq bulochka ichiga joylashtirilgan sersuv sosiska, ustiga ketchup, xantal va maxsus souslar qo'shilgan klassik tez ovqat. Bu xot-dog an'anaviy ta'mga ega bo'lib, har qanday tez ovqatlanish tanaffusini mukammal qiladi. Qulay va to'yimli, uzoq yo'l va shoshilinch kunlar uchun ideal tanlov.",
       "price": 18000,
       "discountPercentage": 0,
       "rating": 4.0,
@@ -197,7 +197,7 @@
     {
       "id": 14,
       "title": "Gamburger (Double Cheese)",
-      "description": "Ikki qavat pishloqli gamburger. Yuqori render tezligi talab etiladi.",
+      "description": "Double Cheese Gamburger - Hafta kunini bayramga aylantiruvchi qalin va sersuv taom. Ikki qavat sersuv kotlet, ikki qavat eritilgan pishloq (cheese), yangi piyoz, tuzlangan bodring va maxsus souslar bilan to'ldirilgan yumshoq bulochka. Bu gamburger barcha tez ovqatlar ixlosmandlari uchun to'yimli va juda mazali tanlovdir.",
       "price": 25000,
       "discountPercentage": 0,
       "rating": 4.7,
@@ -212,7 +212,7 @@
     {
       "id": 15,
       "title": "Coca Cola (1.5L) - Muzlatilgan",
-      "description": "Yozgi kunlar uchun tetiklantiruvchi ichimlik. Lazy Loading testi.",
+      "description": "Coca-Cola (1.5L) - Dunyoning eng sevimli va tetiklantiruvchi gazli ichimligi. O'ziga xos ta'm va yorqin gazlanganlik yozgi kunlar uchun ham, bayram dasturxonlari uchun ham ajoyib tanlovdir. Muzlatilgan holda iste'mol qilinganda maksimal tetiklikni beradi. Katta hajmi butun oila va do'stlar davrasi uchun yetarli.",
       "price": 10000,
       "discountPercentage": 0,
       "rating": 4.4,
@@ -227,7 +227,7 @@
     {
       "id": 16,
       "title": "Pepsi (1L) - Sovuq",
-      "description": "1 litrli shisha idishdagi Pepsi. Shartli renderlash sinovi.",
+      "description": "Pepsi (1L) - Tetiklantiruvchi, yorqin va o'ziga xos karamel notalari bilan ajralib turadigan gazlangan ichimlik. Sovuq holatda iste'mol qilinganda uning kuchi va shirin ta'mi maksimal darajada his etiladi. Do'stlar bilan uchrashuvda, tushlikda yoki sport o'yinlarini tomosha qilishda u mukammal energiya manbai va ajoyib damdir.",
       "price": 8000,
       "discountPercentage": 10.0,
       "rating": 4.3,
@@ -242,7 +242,7 @@
     {
       "id": 17,
       "title": "Fanta (0.5L) - Apelsin",
-      "description": "Apelsin ta'mli Fanta. Oddiy JSX komponentlari.",
+      "description": "Fanta (0.5L) Apelsin ta'mli - Apelsin sharbati va yorqin gazlanganlikning ajoyib aralashmasi. Uning shirin va nordon ta'mi har qanday yoshdagi iste'molchilarni xursand qiladi. Kichik qadog'i uni yo'lda, sayrda yoki kichik tanaffus vaqtida tez va qulay iste'mol qilishga imkon beradi.",
       "price": 5000,
       "discountPercentage": 0,
       "rating": 4.2,
@@ -257,7 +257,7 @@
     {
       "id": 18,
       "title": "Mineral Suv (Gazsiz) 1L",
-      "description": "Tarkibida minerallar yuqori bo'lgan gazsiz suv.",
+      "description": "Gazsiz Mineral Suv (1L) - Toza, foydali va sog'liq uchun zarur bo'lgan minerallarga boy tabiiy ichimlik. Gazlangan emasligi uni ovqat hazm qilish tizimi uchun yumshoq va kundalik ichish uchun ideal qiladi. Tananing suv balansini tiklash va tetiklanish uchun eng yaxshi tanlov.",
       "price": 4500,
       "discountPercentage": 0,
       "rating": 4.9,
@@ -272,7 +272,7 @@
     {
       "id": 19,
       "title": "Qahva (Donador) Premium",
-      "description": "100% Arabica donador qahva. SEO: donador qahva.",
+      "description": "Premium Donador Qahva - 100% Arabica donlaridan tayyorlangan, boy hid va chuqur ta'mga ega bo'lgan yuqori sifatli qahva. Bu premium qahva ertalabki energiya beruvchi ichimlik sifatida yoki kechki dam olish uchun ajoyib tanlovdir. Yangi maydalangan donlar maksimal lazzat va xushbo'ylikni ta'minlaydi.",
       "price": 85000,
       "discountPercentage": 15.0,
       "rating": 4.8,
@@ -287,7 +287,7 @@
     {
       "id": 20,
       "title": "Choy (Qora) Katta Paket",
-      "description": "Asosiy qora choy. Katta miqdordagi ma'lumotni simulyatsiya qilish.",
+      "description": "Qora Choy (Katta Paket) - Kundalik choy marosimi uchun asosiy va kuchli lazzatga ega qora choy. Katta paket uzun muddatli foydalanish uchun iqtisodiy jihatdan qulay. Uning boy rangi va tetiklantiruvchi ta'mi kunning istalgan vaqtida ajoyib dam beradi.",
       "price": 22000,
       "discountPercentage": 0,
       "rating": 4.7,
@@ -302,7 +302,7 @@
     {
       "id": 21,
       "title": "Choy (Yashil) Bargli",
-      "description": "Yuqori sifatli yashil bargli choy.",
+      "description": "Yuqori Sifatli Yashil Bargli Choy - Antioksidantlarga boy va sog'liq uchun foydali bo'lgan tabiiy yashil choy. Uning yengil, nozik ta'mi va xushbo'y hidi tinchlantiruvchi va tetiklantiruvchi ta'sir ko'rsatadi. Bu choy sog'lom turmush tarziga rioya qiluvchilar uchun ideal tanlovdir.",
       "price": 35000,
       "discountPercentage": 10.0,
       "rating": 4.6,
@@ -317,7 +317,7 @@
     {
       "id": 22,
       "title": "Asal (Tog') 500g",
-      "description": "Tog' o'simliklaridan olingan tabiiy asal. Memoization testi.",
+      "description": "Tog' o'simliklarining nektaridan yig'ilgan 100% tabiiy va ekologik toza asal. U boy ta'mga, xushbo'y hidga va shifobaxsh xususiyatlarga ega. Tog' asali immunitetni mustahkamlaydi va organizm uchun foydali vitaminlar manbaidir. Nonushta, choy bilan yoki shifobaxsh vosita sifatida iste'mol qilish uchun juda mos keladi.",
       "price": 70000,
       "discountPercentage": 0,
       "rating": 5.0,
@@ -332,7 +332,7 @@
     {
       "id": 23,
       "title": "Shakar (Qand) 1kg",
-      "description": "Standart shakar, osonlikcha filtrlash mumkin.",
+      "description": "Oziq-ovqat sanoatida keng qo'llaniladigan va kundalik hayotda zarur bo'lgan yuqori sifatli tozalangan shakar. Mayin kristall tuzilishi bilan u ichimliklar, pishiriqlar va konservatsiya uchun ideal. 1 kg hajmdagi qadoq uy xo'jaligi uchun qulay va iqtisodiydir. Standart shirinlik ta'minotchisi.",
       "price": 10000,
       "discountPercentage": 0,
       "rating": 4.0,
@@ -347,7 +347,7 @@
     {
       "id": 24,
       "title": "O'simlik Yog'i (1L)",
-      "description": "Birinchi navli kungaboqar yog'i. Massiv ma'lumotlar.",
+      "description": "Birinchi navli kungaboqar yog'i - kundalik pishirish uchun eng yaxshi yechim. Uning yengil ta'mi va hidi taomlarning asl lazzatini o'zgartirmaydi. Qovurish, salatlar tayyorlash va turli xil pishiriqlar uchun javob beradi. 1 litrli qulay qadoq oshxonada uzoq vaqt foydalanishni ta'minlaydi.",
       "price": 18000,
       "discountPercentage": 5.0,
       "rating": 4.3,
@@ -362,7 +362,7 @@
     {
       "id": 25,
       "title": "Zaytun Yog'i (Extra Virgin)",
-      "description": "Eng yaxshi zaytun yog'i, salatlar uchun.",
+      "description": "Extra Virgin zaytun yog'i - birinchi sovuq siqish usuli bilan olingan, eng yuqori sifatli yog'. Uning boy meva ta'mi va yorqin xushbo'y hidi salatlar, sovuq gazaklar va tayyor taomlarni bezash uchun idealdir. Sog'liq uchun foydali mono-to'yinmagan yog'larga va antioksidantlarga boy.",
       "price": 65000,
       "discountPercentage": 0,
       "rating": 4.9,
@@ -377,7 +377,7 @@
     {
       "id": 26,
       "title": "Sut (2.5%) 1L",
-      "description": "2.5% yog'li klassik sut. Tez yuklash testi.",
+      "description": "Tabiiy va toza 2.5% yog'li klassik sut. Unda kaltsiy va vitaminlar ko'p bo'lib, suyak salomatligi uchun muhimdir. Sut nonushtaga, kofe tayyorlashga, pishiriqlarga qo'shishga yoki shunchaki o'zi iste'mol qilishga mos keladi. 1 litrli qulay qadoq kundalik ehtiyojlarni qondiradi.",
       "price": 8500,
       "discountPercentage": 0,
       "rating": 4.5,
@@ -392,7 +392,7 @@
     {
       "id": 27,
       "title": "Qatiq (Tabiiy) 500g",
-      "description": "Uy usulida tayyorlangan tabiiy qatiq.",
+      "description": "Uy usulida tayyorlangan tabiiy qatiq - bu foydali bakteriyalarga boy, salqin va nordon ta'mli sut mahsuloti. U ovqat hazm qilish tizimini yaxshilashga yordam beradi va to'yimli snack sifatida ajoyibdir. Qatiqni shunchaki ichish yoki turli xil taomlar (masalan, sovuq sho'rvalar) tayyorlash uchun ishlatish mumkin.",
       "price": 7000,
       "discountPercentage": 0,
       "rating": 4.7,
@@ -407,7 +407,7 @@
     {
       "id": 28,
       "title": "Smetana (Qaymoq) 35%",
-      "description": "35% yog'li smetana. Interaktivlik sinovi.",
+      "description": "35% yog'li yuqori sifatli qaymoq (Smetana) - boy, qalin va krem-yumshoq tuzilishga ega. U sho'rvalar, borodinskiy non va pelmenlarga ajoyib qo'shimcha bo'ladi. Shuningdek, u xamir mahsulotlari va krem tayyorlash uchun ham juda mos keladi. Dasturxonga nafislik va to'yimlilik qo'shadi.",
       "price": 14000,
       "discountPercentage": 5.0,
       "rating": 4.8,
@@ -422,7 +422,7 @@
     {
       "id": 29,
       "title": "Pishloq (Golland) 400g",
-      "description": "Golland usulidagi qattiq pishloq.",
+      "description": "Golland usulida tayyorlangan, klassik qattiq pishloq. Uning yengil nordon ta'mi va zich tuzilishi uni sendvichlar, buterbrodlar va lazanya kabi issiq taomlar uchun ideal qiladi. Yuqori oqsil va kaltsiy miqdori bilan bu pishloq to'yimli va foydali hisoblanadi.",
       "price": 45000,
       "discountPercentage": 10.0,
       "rating": 4.6,
@@ -437,7 +437,7 @@
     {
       "id": 30,
       "title": "Pishloq (Mozzarella) 150g",
-      "description": "Salatlar va pizzalar uchun yumshoq Mozzarella.",
+      "description": "Yumshoq Mozzarella pishlog'i - Italiya oshxonasining sevimli tarkibiy qismi. Uning silliq, elastik tuzilishi va yengil, sutli ta'mi uni Caprese salati, pizzalar va issiq sendvichlar uchun mukammal qiladi. Tez eruvchanligi uni pishirishda juda qulay qiladi.",
       "price": 28000,
       "discountPercentage": 0,
       "rating": 4.7,

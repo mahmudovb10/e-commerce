@@ -32,7 +32,7 @@ export default function Home() {
             <Link href={`/singleproduct/${prod.id}`}>
               <figure>
                 <img
-                  className="prodImage w-full h-48 object-cover"
+                  className="prodImage w-full h-48 object-cover "
                   src={prod.thumbnail}
                   alt={prod.title}
                   loading="lazy"
@@ -42,7 +42,9 @@ export default function Home() {
                 <h2 className="card-title text-lg font-semibold">
                   {prod.title}
                 </h2>
-                <p className="text-sm text-gray-600">{prod.description}</p>
+                <p className="text-sm text-gray-600 line-clamp-2">
+                  {prod.description}
+                </p>
                 <div className="card-actions justify-end">
                   <button className="btn btn-primary" onClick={handleSubmit}>
                     Sotib olish {prod.price} So'm
