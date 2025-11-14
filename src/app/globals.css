@@ -1,10 +1,16 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* alan-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Alan Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/alan-sans-v1-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 .prodCard {
-  /* display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr); */
   margin-top: 3rem;
 }
 
@@ -12,4 +18,23 @@
   width: 25rem;
   height: 15rem !important;
   object-fit: cover;
+}
+
+.singleProdImg {
+  width: 40rem;
+  height: 20rem;
+  border-radius: 1.2rem;
+  position: relative;
+  top: 2rem;
+}
+
+.singleProdTitle {
+  width: 35rem;
+  margin-left: 45rem;
+  z-index: 2;
+  position: relative;
+  top: -18rem;
+  font-family: "Alan Sans";
+  font-weight: 700;
+  font-size: 2rem;
 }
