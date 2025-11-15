@@ -115,9 +115,17 @@ const RegisterPage = () => {
               required
             />
           </div>
+          <div className="form-control mb-6 w-full">
+            <input
+              type="file"
+              className="file-input file-input-primary"
+              accept="image/*"
+              required
+            />
+          </div>
 
           <div className="form-control">
-            <button type="submit" className="btn btn-secondary w-full">
+            <button type="submit" className="btn btn-primary w-full">
               Email orqali Ro'yxatdan O'tish
             </button>
           </div>
