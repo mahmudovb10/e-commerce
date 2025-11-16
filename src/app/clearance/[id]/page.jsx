@@ -10,8 +10,26 @@ function ClearancePage({ params }) {
   }
 
   const { id } = resolveParams;
-
   const { data, isPending, error } = useFetch("/api.json");
+
+  // Fake professional delivery time generator
+  const now = new Date();
+  const minTime = new Date(now.getTime() + 40 * 60000)
+    .toTimeString()
+    .slice(0, 5);
+  const maxTime = new Date(now.getTime() + 60 * 60000)
+    .toTimeString()
+    .slice(0, 5);
+
+  // Fake data for professionalism
+  const deliveryPrice = 7000;
+  const serviceFee = 1000;
+  const courier = {
+    name: "Sherzod A.",
+    rating: "4.9",
+    vehicle: "Velosiped",
+  };
+  const orderID = Math.floor(100000 + Math.random() * 900000);
 
   if (isPending) {
     return <span className="loading loading-dots loading-xl"></span>;
@@ -31,8 +49,66 @@ function ClearancePage({ params }) {
   }
 
   return (
-    <div>
-      <h1>{prod.title}</h1>
+    <div className="p-4 max-w-xl mx-auto">
+      <img
+        className="w-full rounded-xl mb-4"
+        src={prod.thumbnail}
+        alt={prod.title}
+      />
+
+      <h1 className="text-2xl font-bold mb-2">{prod.title}</h1>
+
+      <div className="bg-gray-100 p-4 rounded-xl mb-4">
+        <h2 className="text-lg font-semibold mb-2">Buyurtma holati</h2>
+
+        <ul className="steps steps-vertical">
+          <li className="step step-primary">Buyurtma qabul qilindi</li>
+          <li className="step step-primary">Ovqat tayyorlanmoqda</li>
+          <li className="step step-primary">Kuryer tayinlandi</li>
+          <li className="step">Kuryer yo‘lda</li>
+        </ul>
+      </div>
+
+      <div className="bg-white shadow-md rounded-xl p-4 mb-4">
+        <h2 className="text-lg font-semibold mb-1">Yetkazib berish vaqti</h2>
+        <p className="text-gray-700">
+          ⏱ Taxminiy yetib borish:{" "}
+          <b>
+            {minTime} – {maxTime}
+          </b>
+        </p>
+      </div>
+
+      <div className="bg-white shadow-md rounded-xl p-4 mb-4">
+        <h2 className="text-lg font-semibold mb-3">Narxlar</h2>
+        <p>
+          Mahsulot narxi: <b>{prod.price} so'm</b>
+        </p>
+        <p>
+          Yetkazib berish narxi: <b>{deliveryPrice} so'm</b>
+        </p>
+        <p>
+          Xizmat haqi: <b>{serviceFee} so'm</b>
+        </p>
+        <hr className="my-2" />
+        <p className="text-xl font-bold">
+          Jami: {prod.price + deliveryPrice + serviceFee} so'm
+        </p>
+      </div>
+
+      <div className="bg-yellow-100 p-4 rounded-xl mb-4">
+        <h2 className="text-lg font-semibold mb-2">Sizning kuryeringiz</h2>
+        <p>
+          🚴‍♂️ <b>{courier.name}</b> — Reytingi: ⭐ {courier.rating}
+        </p>
+        <p>Transport: {courier.vehicle}</p>
+      </div>
+
+      <div className="text-center text-gray-600 mt-6">
+        <p>
+          Buyurtma raqami: <b>#{orderID}</b>
+        </p>
+      </div>
     </div>
   );
 }
