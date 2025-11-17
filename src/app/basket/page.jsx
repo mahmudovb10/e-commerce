@@ -8,24 +8,26 @@ export default function BasketPage() {
   if (!cart || cart.length === 0) return <p>Savatcha bo‘sh</p>;
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Savatcha</h1>
-      <div className="space-y-3">
-        {cart.map((item) => (
-          <div
-            key={item.id}
-            className="card p-4 bg-base-200 flex justify-between items-center"
-          >
-            <div>
-              <h2 className="text-xl font-semibold">{item.title}</h2>
-              <p>
-                {item.price} so‘m x {item.quantity}
-              </p>
+    <div className="container">
+      <h1 className="basket__title">Savatcha</h1>
+      <div>
+        {cart.map((prod) => (
+          <div key={prod.id}>
+            <div className="basket__prod__cart">
+              <div className="basket__left">
+                <img className="basket__prod__img" src={prod.thumbnail} />
+                <h2 className="basket__title">{prod.title}</h2>
+              </div>
+
+              <div className="basket__right">
+                <p className="basket__prod__price">Narxi: {prod.price} so‘m</p>
+                <p className="basket__prod__numb">Soni: x{prod.quantity}</p>
+              </div>
             </div>
           </div>
         ))}
       </div>
-      <p className="text-lg font-bold mt-4">Jami: {cartTotal} som</p>
+      <p>Jami: {cartTotal} som</p>
     </div>
   );
 }

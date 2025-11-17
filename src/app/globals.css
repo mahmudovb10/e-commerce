@@ -171,3 +171,40 @@ body {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
+
+.basket__prod__cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4e3c1;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.basket__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.basket__prod__img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.basket__right {
+  text-align: right;
+}
+
+.basket__title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.basket__prod__price,
+.basket__prod__numb {
+  font-size: 0.9rem;
+}
