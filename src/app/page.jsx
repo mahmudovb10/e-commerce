@@ -2,10 +2,20 @@
 
 import { useFetch } from "@/lib/useFetch";
 import Link from "next/link";
+import { useGlobalContext } from "@/context/GlobalContext";
 
 export default function Home() {
   const { data, isPending, error } = useFetch("/api.json"); // Get API
   // Just so it doesn't get updated for now
+
+  const { addCart } = useGlobalContext();
+
+  const handleAddtoCart = (e, product) => {
+    e.preventDefault();
+    e.stopPropagation();
+    addCart(product);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -49,7 +59,10 @@ export default function Home() {
                   {prod.description}
                 </p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary" onClick={handleSubmit}>
+                  <button
+                    className="btn btn-primary"
+                    onClick={(e) => handleAddtoCart(e, prod)}
+                  >
                     Savatga solish
                   </button>
                 </div>
