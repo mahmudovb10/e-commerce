@@ -1,7 +1,7 @@
 function page() {
   return (
     <div>
-      <h1>Basket</h1>
+      <h1>Savat</h1>
     </div>
   );
 }
