@@ -4,7 +4,7 @@ import { useGlobalContext } from "@/context/GlobalContext";
 import Link from "next/link";
 
 export default function BasketPage() {
-  const { cart, cartTotal } = useGlobalContext();
+  const { cart, cartTotal, deleteProd } = useGlobalContext();
 
   if (!cart || cart.length === 0) return <p>Savatcha bo‘sh</p>;
 
@@ -25,7 +25,10 @@ export default function BasketPage() {
               <div className="basket__right">
                 <p className="basket__prod__price">Narxi: {prod.price} so‘m</p>
                 <p className="basket__prod__numb">Soni: x{prod.quantity}</p>
-                <button className="basket__prod__remove">
+                <button
+                  className="basket__prod__remove"
+                  onClick={() => deleteProd(prod.id)}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
