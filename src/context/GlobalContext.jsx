@@ -23,19 +23,24 @@ export const useGlobalContext = () => {
 export const GlobalContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [user, setUser] = useState(null);
+  const [userPhoto, setUserphoto] = useState("");
   const [loading, setLoading] = useState(true);
+
   // register user
   const registerUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
+
   // login user
   const loginUser = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
+
   // Logout user
   const logoutUser = () => {
     return signOut(auth);
   };
+
   // Delete user
   const deleteAndLogoutUser = async () => {
     if (auth.currentUser) {
@@ -62,10 +67,22 @@ export const GlobalContextProvider = ({ children }) => {
     if (savedCart) setCart(JSON.parse(savedCart));
   }, []);
 
-  //  LocalStorage ga yozish
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savedPhoto = localStorage.getItem("userPhoto");
+      if (savedPhoto) setUserphoto(savedPhoto);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (userPhoto) {
+      localStorage.setItem("userPhoto", userPhoto);
+    }
+  }, [userPhoto]);
 
   // product add basket
   const addCart = (product) => {
@@ -143,6 +160,8 @@ export const GlobalContextProvider = ({ children }) => {
     cartTotal,
     cartCount,
     deleteProd,
+    userPhoto,
+    setUserphoto,
   };
 
   return (

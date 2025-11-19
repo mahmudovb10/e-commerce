@@ -1,20 +1,26 @@
 "use client";
 
 import { useState, useEffect } from "react";
-// Next.js navigatsiyasi
 import { useRouter } from "next/navigation";
-// Next.js Link
 import Link from "next/link";
 import { useGlobalContext } from "@/context/GlobalContext";
 
 const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [url, setUrl] = useState("");
   const [error, setError] = useState(null);
   const router = useRouter();
 
-  const { registerUser, loginWithGoogle, loginAnonymously, user, loading } =
-    useGlobalContext();
+  const {
+    registerUser,
+    loginWithGoogle,
+    loginAnonymously,
+    user,
+    loading,
+    userPhoto,
+    setUserphoto,
+  } = useGlobalContext();
 
   useEffect(() => {
     if (!loading && user) {
@@ -31,7 +37,8 @@ const RegisterPage = () => {
     }
 
     try {
-      await registerUser(email, password);
+      await registerUser(email, password, url);
+      setUserphoto(url);
     } catch (err) {
       setError("Ro'yxatdan o'tishda xato: " + err.message);
     }
@@ -117,9 +124,11 @@ const RegisterPage = () => {
           </div>
           <div className="form-control mb-6 w-full">
             <input
-              type="file"
-              className="file-input file-input-primary"
-              accept="image/*"
+              type="url"
+              placeholder="URL"
+              className="input input-bordered w-full"
+              value={userPhoto}
+              onChange={(e) => setUserphoto(e.target.value)}
               required
             />
           </div>

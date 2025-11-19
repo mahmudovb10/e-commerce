@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
 function LayoutContent({ children }) {
   const pathname = usePathname();
 
-  const { cartCount, cartTotal, logoutUser } = useGlobalContext();
+  const { cartCount, cartTotal, logoutUser, userPhoto } = useGlobalContext();
 
   const noLayoutRoutes = ["/login", "/register"];
   const hideLayout = noLayoutRoutes.includes(pathname);
@@ -114,7 +114,7 @@ function LayoutContent({ children }) {
                       <div className="w-10 rounded-full">
                         <img
                           alt="Avatar"
-                          src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                          src={userPhoto ? userPhoto : "/defaultIcon.png"}
                         />
                       </div>
                     </div>
@@ -123,7 +123,7 @@ function LayoutContent({ children }) {
                       className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
                     >
                       <li>
-                        <a className="justify-between">
+                        <a href="/profile" className="justify-between">
                           Profil
                           <span className="badge">New</span>
                         </a>
