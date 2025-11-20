@@ -148,11 +148,12 @@ body {
 .clearance__Img {
   width: 20rem;
   height: 20rem;
-  border-radius: 0.5rem;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
   object-fit: cover;
   position: relative;
   top: 2rem;
-  left: 10rem;
+  left: 2rem;
 }
 
 .clearance__info {

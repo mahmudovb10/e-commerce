@@ -36,7 +36,7 @@ function SingleProduct({ params }) {
   }
 
   return (
-    <div>
+    <div className="mt-[5rem]">
       <img className="singleProdImg" src={prod.thumbnail} alt={prod.title} />
       <h1 className="singleProdTitle">{prod.title}</h1>
       <p className="singleProdDesc">{prod.description}</p>

@@ -49,16 +49,16 @@ function ClearancePage({ params }) {
   }
 
   return (
-    <div className="mt-[8rem] p-4 max-w-xl mx-auto">
+    <div className="mt-12 p-4  container">
       <img
-        className="w-full rounded-xl mb-4"
+        className="w-full rounded-xl mb-4 clearance__Img"
         src={prod.thumbnail}
         alt={prod.title}
       />
 
       <h1 className="text-2xl font-bold mb-2">{prod.title}</h1>
 
-      <div className="bg-gray-100 p-4 rounded-xl mb-4">
+      <div className="bg-gray-100 p-4 rounded-xl mb-6">
         <h2 className="text-lg font-semibold mb-2">Buyurtma holati</h2>
 
         <ul className="steps steps-vertical">
