@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useGlobalContext } from "@/context/GlobalContext";
 
 const RegisterPage = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [url, setUrl] = useState("");
@@ -93,6 +94,19 @@ const RegisterPage = () => {
         )}
 
         <form onSubmit={handleRegister}>
+          <div className="form-control mb-4">
+            <label className="label">
+              <span className="label-text">Ism</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Ismingiz..."
+              className="input input-bordered w-full"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
           {/* Email input */}
           <div className="form-control mb-4">
             <label className="label">
@@ -123,6 +137,9 @@ const RegisterPage = () => {
             />
           </div>
           <div className="form-control mb-6 w-full">
+            <label className="label">
+              <span className="label-text">Photo URL</span>
+            </label>
             <input
               type="url"
               placeholder="URL"
