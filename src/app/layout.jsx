@@ -7,7 +7,7 @@ import {
 } from "@/context/GlobalContext";
 import Link from "next/link";
 import "./globals.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function RootLayout({ children }) {
@@ -25,10 +25,20 @@ export default function RootLayout({ children }) {
 function LayoutContent({ children }) {
   const pathname = usePathname();
 
+  const [open, setOpen] = useState(false);
+
   const { cartCount, cartTotal, logoutUser, userPhoto } = useGlobalContext();
 
   const noLayoutRoutes = ["/login", "/register"];
   const hideLayout = noLayoutRoutes.includes(pathname);
+
+  const dialogRef = useRef(null);
+
+  useEffect(() => {
+    if (open && dialogRef.current) {
+      dialogRef.current.showModal();
+    }
+  }, [open]);
 
   useEffect(() => {
     let title = "Orderdine";
@@ -123,10 +133,12 @@ function LayoutContent({ children }) {
                       className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
                     >
                       <li>
-                        <Link href={"/profile"}>
-                          <p className="justify-between">Profil</p>
-                          <span className="badge">New</span>
-                        </Link>
+                        <p
+                          className="justify-between"
+                          onClick={() => setOpen(true)}
+                        >
+                          Profil <span className="badge">New</span>
+                        </p>
                       </li>
                       <li>
                         <a>Sozlamalar</a>
@@ -140,6 +152,22 @@ function LayoutContent({ children }) {
               </div>
             </div>
           </header>
+        )}
+
+        {open && (
+          <dialog ref={dialogRef} className="modal">
+            <div className="modal-box">
+              <button
+                className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                onClick={() => setOpen(false)}
+              >
+                ✕
+              </button>
+
+              <h3 className="font-bold text-lg profile__title">Profil</h3>
+              <img className="profile__img" src={userPhoto} alt="" />
+            </div>
+          </dialog>
         )}
 
         <main className="main flex-grow p-4">
