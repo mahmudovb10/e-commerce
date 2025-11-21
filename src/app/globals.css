@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+html[data-theme="dark"] {
+  --tw-bg-opacity: 1;
+  background-color: #000;
+  color: #fff;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -192,7 +198,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f4e3c1;
   padding: 1rem;
   border-radius: 1rem;
   margin-bottom: 1rem;

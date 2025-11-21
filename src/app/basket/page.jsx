@@ -14,7 +14,7 @@ export default function BasketPage() {
       <div>
         {cart.map((prod) => (
           <div key={prod.id}>
-            <div className="basket__prod__cart">
+            <div className="basket__prod__cart bg-blue-200 dark:bg-black">
               <div className="basket__left">
                 <Link href={`/singleproduct/${prod.id}`}>
                   <img className="basket__prod__img" src={prod.thumbnail} />
@@ -26,7 +26,7 @@ export default function BasketPage() {
                 <p className="basket__prod__price">Narxi: {prod.price} so‘m</p>
                 <p className="basket__prod__numb">Soni: x{prod.quantity}</p>
                 <button
-                  className="basket__prod__remove"
+                  className="basket__prod__remove dark:bg-white"
                   onClick={() => deleteProd(prod.id)}
                 >
                   <svg

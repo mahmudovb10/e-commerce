@@ -9,10 +9,12 @@ import Link from "next/link";
 import "./globals.css";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { HiMiniComputerDesktop } from "react-icons/hi2";
 
 export default function RootLayout({ children }) {
+  const [theme, setTheme] = useState("light");
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" data-theme={theme}>
       <body>
         <GlobalContextProvider>
           <LayoutContent>{children}</LayoutContent>
@@ -24,21 +26,24 @@ export default function RootLayout({ children }) {
 
 function LayoutContent({ children }) {
   const pathname = usePathname();
-
-  const [open, setOpen] = useState(false);
+  const [theme, setTheme] = useState("light");
 
   const { cartCount, cartTotal, logoutUser, userPhoto } = useGlobalContext();
 
   const noLayoutRoutes = ["/login", "/register"];
   const hideLayout = noLayoutRoutes.includes(pathname);
 
-  const dialogRef = useRef(null);
-
   useEffect(() => {
-    if (open && dialogRef.current) {
-      dialogRef.current.showModal();
-    }
-  }, [open]);
+    const saved = localStorage.getItem("theme") || "light";
+    setTheme(saved);
+    document.documentElement.setAttribute("data-teme", saved);
+  }, []);
+
+  const changeTheme = (newTheme) => {
+    setTheme(newTheme);
+    document.documentElement.setAttribute("date-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
 
   useEffect(() => {
     let title = "Orderdine";
@@ -64,13 +69,53 @@ function LayoutContent({ children }) {
                   <Link href="/" className="btn btn-ghost text-xl">
                     Orderdine
                   </Link>
+                  <div className="dropdown ml-[57rem] ">
+                    <div tabIndex={0} role="button" className="btn m-1">
+                      <HiMiniComputerDesktop />
+
+                      <svg
+                        width="12px"
+                        height="12px"
+                        className="inline-block h-2 w-2 fill-current opacity-60"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 2048 2048"
+                      >
+                        <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+                      </svg>
+                    </div>
+                    <ul
+                      tabIndex="-1"
+                      className="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl"
+                    >
+                      <li>
+                        <input
+                          type="radio"
+                          name="theme-dropdown"
+                          className="theme-controller w-full btn btn-neutral btn-outline border-0 justify-start"
+                          aria-label="Dark"
+                          value="dark"
+                          onClick={() => changeTheme("dark")}
+                        />
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          name="theme-dropdown"
+                          className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
+                          aria-label="Light"
+                          value="light"
+                          onClick={() => changeTheme("light")}
+                        />
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div className="flex-none z-10">
                   <div className="dropdown dropdown-end">
                     <div
                       tabIndex={0}
                       role="button"
-                      className="btn btn-ghost btn-circle"
+                      className="btn btn-ghost btn-circle mr-6"
                     >
                       <div className="indicator">
                         <svg
@@ -87,7 +132,7 @@ function LayoutContent({ children }) {
                             d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                           />
                         </svg>
-                        <span className="badge badge-sm indicator-item">
+                        <span className="badge badge-sm indicator-item bg-blue-600 text-white">
                           {cartCount}
                         </span>
                       </div>
@@ -173,7 +218,7 @@ function LayoutContent({ children }) {
                 </p>
               </aside>
               <nav>
-                <h6 className="footer-title">Services</h6>
+                <h6 className="footer-title ">Services</h6>
                 <a className="link link-hover">Branding</a>
                 <a className="link link-hover">Design</a>
                 <a className="link link-hover">Marketing</a>

@@ -59,7 +59,7 @@ function ClearancePage({ params }) {
       <div className="clearance__data">
         <h1 className="text-2xl font-bold mb-2">{prod.title}</h1>
 
-        <div className="bg-gray-100 p-4 rounded-xl mb-6">
+        <div className="bg-gray-100 p-4 rounded-xl mb-6 dark:bg-black">
           <h2 className="text-lg font-semibold mb-2">Buyurtma holati</h2>
 
           <ul className="steps steps-vertical">
@@ -70,9 +70,9 @@ function ClearancePage({ params }) {
           </ul>
         </div>
 
-        <div className="bg-white shadow-md rounded-xl p-4 mb-4">
+        <div className="bg-white shadow-md rounded-xl p-4 mb-4 dark:bg-black">
           <h2 className="text-lg font-semibold mb-1">Yetkazib berish vaqti</h2>
-          <p className="text-gray-700">
+          <p className="text-gray-700 dark:text-white">
             ⏱ Taxminiy yetib borish:{" "}
             <b>
               {minTime} – {maxTime}
@@ -80,7 +80,7 @@ function ClearancePage({ params }) {
           </p>
         </div>
 
-        <div className="bg-white shadow-md rounded-xl p-4 mb-4">
+        <div className="bg-white shadow-md rounded-xl p-4 mb-4 dark:bg-black">
           <h2 className="text-lg font-semibold mb-3">Narxlar</h2>
           <p>
             Mahsulot narxi: <b>{prod.price} so'm</b>
@@ -97,7 +97,7 @@ function ClearancePage({ params }) {
           </p>
         </div>
 
-        <div className="bg-yellow-100 p-4 rounded-xl mb-4">
+        <div className="bg-yellow-100 p-4 rounded-xl mb-4 dark:bg-black">
           <h2 className="text-lg font-semibold mb-2">Sizning kuryeringiz</h2>
           <p>
             🚴‍♂️ <b>{courier.name}</b> — Reytingi: ⭐ {courier.rating}
